@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="fly-db@localhost" uuid="e576da1e-69ed-4ed3-b713-34765f97aa47">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/fly-db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="hotel-db@localhost" uuid="107f47d8-b8c3-4f99-9410-0e76eee59b61">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/hotel-db</jdbc-url>
+    </data-source>
+  </component>
+</project>
