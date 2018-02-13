@@ -1,6 +1,7 @@
 import javax.transaction.xa.Xid;
 
 public class MyXid implements Xid {
+    //blabla i want to make a conflict too
     protected int formatId;
     protected byte gtrid[];
     protected byte bqual[];
