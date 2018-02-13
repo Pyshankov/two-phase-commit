@@ -65,6 +65,7 @@ public class TwoPhaseCommitMain {
         } catch (SQLException | XAException exception) {
                 exception.printStackTrace();
             //handle by hand
+            //and resolve it immidiatelly
 
         } finally {
             try {
