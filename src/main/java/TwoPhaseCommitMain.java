@@ -47,8 +47,8 @@ public class TwoPhaseCommitMain {
             flyXAResource.start(xidFly, TMNOFLAGS);
             hotelXAResource.start(xidHotel, TMNOFLAGS);
 
-            flyStatement.execute("INSERT INTO flight_booking VALUES (5,'1','1','1','1',CURRENT_TIMESTAMP)");
-            hotelStatement.execute("INSERT INTO hotel_booking VALUES (5,'1','1',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)");
+            flyStatement.execute("INSERT INTO flight_booking VALUES (9,'1','1','1','1',CURRENT_TIMESTAMP)");
+            hotelStatement.execute("INSERT INTO hotel_booking VALUES (9,'1','1',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)");
 
             flyXAResource.end(xidFly, TMSUCCESS);
             hotelXAResource.end(xidHotel, TMSUCCESS);
@@ -63,13 +63,9 @@ public class TwoPhaseCommitMain {
                 hotelXAResource.rollback(xidHotel);
             }
         } catch (SQLException | XAException exception) {
-            try {
                 exception.printStackTrace();
-                flyXAResource.rollback(xidFly);
-                hotelXAResource.rollback(xidHotel);
-            } catch (XAException e) {
-                e.printStackTrace();
-            }
+            //handle by hand
+
         } finally {
             try {
                 flyStatement.close();
